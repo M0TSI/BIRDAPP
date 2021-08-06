@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.973);
+    z-index: 100;
+    width: 100%;
+/*Estas dos propiedades permites mantener la barra de navegacion mientras hay scroll
+Adicionalmente permite mantenerla en el TOP*/
+    position: sticky;
+    top: 0;
+    height: 60px;
+    margin-bottom: 20px;
+
+}
+.header_icon {
+    margin-left: 20px;
+    padding: 10px;
+    height: 50px;
+}
+.header_center {
+    display: flex;
+/*flex 1 ??? para que lo usan ?
+    flex: 1;*/
+    align-items: center;
+    max-width: fit-content;
+    padding: 10px;
+    height: 30px;
+/* Se utiliza para simular un gran borde del input con el search icon*/
+    border: 1px solid lightgray;
+    border-radius: 999px;
+}
+
+.header_center > input {
+/*quitar el borde del input para que quede el otro borde */
+    border: none;
+    padding: 10px;
+    outline-width: 0;
+}
+.header_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15vw;
+    margin-right: 80px;
+
+}
+

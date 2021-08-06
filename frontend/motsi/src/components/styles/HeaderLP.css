@@ -1,0 +1,27 @@
+
+#div1{
+    background-color:blue;
+    display: flex;
+    border-radius: 5px;
+    height: 67px;
+    width: 100%;
+    margin-bottom: 60px;
+    justify-content: center;
+  }
+  #div2{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }#div2:hover{
+    cursor: pointer;
+  }
+  h1{
+    color: #F0F8FF;
+    font-size: 25px;
+    margin: auto;
+  }
+  img{
+      height: 40px;
+      width: 40px;
+  }

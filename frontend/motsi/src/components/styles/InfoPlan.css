@@ -1,0 +1,52 @@
+.infoplan {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+      display: flex;
+      padding: 4vh;
+      justify-content: space-around;    
+      background-color: rgba(0, 0, 0, 0.897);
+      align-items: center;
+      box-shadow: 0 20px 30px -30px black;
+      flex-wrap: wrap;
+      color: blanchedalmond;
+      text-align: left;
+  }
+  .Bold{
+    font-weight: bold;
+  }
+  .BoldPrice{
+    font-weight: bold;
+    color:darkgoldenrod;
+  }
+  .Imagen{
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 30px -5px black;
+    border-radius: 10px;
+  }
+  .ImagenC{
+    
+    width: 100%;  
+    margin: 20px;
+    justify-content: center;
+  }
+  .divInfo{
+    width: 100% ;
+    padding: 3vw;
+    text-align: justify;
+  }
+  
+  .PriceNameC{
+    border-radius: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.192);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0px 10px 0px black;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+  }

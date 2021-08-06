@@ -1,0 +1,109 @@
+#imgDescripción{
+    height: 300px;
+    width: 300px;
+    animation-duration: 3s;
+  animation-name: slidein;
+
+}
+#imgDescripciónQ{
+    height: 250px;
+    width: 390px;
+    animation-duration: 3s;
+    animation-name: slideinQ;
+    margin: 10px;
+
+}
+#Description>div>h1{
+    color: teal;
+    font-size: 33px;
+    margin-bottom: 15px;
+}
+#Description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+p{
+    min-width: 280px;
+    max-width: 550px;
+}
+#List{
+    border-right: 1px solid lightgray;
+    padding: 15px;
+    margin-right: 10px;
+}
+#List>div{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#List>div>p{
+    margin-bottom: 0;
+}
+svg{
+    width: 20px;
+    margin-right: 15px;
+}
+#registrate{
+    width: 100%;
+}
+
+
+@keyframes slideinQ {
+    from {
+      
+    height: 0;
+    width: 0;
+    }
+  
+    to {
+        
+    height: 250px;
+    width: 390px;
+    } 
+}
+@keyframes slidein {
+    from {
+      
+    height: 0;
+    width: 0;
+    }
+  
+    to {
+        
+    height: 300px;
+    width: 300px;
+    } 
+}
+
+@media (max-width: 802px){
+    #List{
+        border-right: none;
+    }
+
+    #Description>div{
+        margin-bottom: 15px;
+    }
+    #Quien{
+        border-bottom: 1px solid lightgray;
+    }
+    #List{
+        border-bottom: 1px solid lightgray;
+    }
+}
+
+@media (max-width: 380px){
+    #imgDescripciónQ{
+        height: 160px;
+        width: 250px;
+        margin: none;
+    }
+    #imgDescripción{
+        height: 240px;
+        width: 240px;
+        margin: none;
+    }
+}
