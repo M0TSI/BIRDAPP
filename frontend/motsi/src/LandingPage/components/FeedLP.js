@@ -28,6 +28,7 @@ export default class FeedLP extends Component {
     }
     render() {
         return (
+            <React.Fragment>
             <div id="Form">
             <div className="col-md-6 offset-md-3">
             <div className="card card-body">
@@ -75,6 +76,7 @@ export default class FeedLP extends Component {
             </div>
         </div>
         </div>
+        </React.Fragment>
         
         )
     }

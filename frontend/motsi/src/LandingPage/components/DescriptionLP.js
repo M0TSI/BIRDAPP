@@ -4,6 +4,7 @@ import "../components/styles/DescriptionLP.css"
 export default class DescriptionLP extends Component {
     render() {
         return (
+            <React.Fragment>
             <div id="Description">
 
                 
@@ -29,6 +30,7 @@ export default class DescriptionLP extends Component {
                </div>
                
             </div>
+            </React.Fragment>
 
         )
     }

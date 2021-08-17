@@ -1,0 +1,126 @@
+.containerSignin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 18px -6px rgba(0, 0, 0, 0.75);
+    padding-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    /* #EFF5BA,#EEF5DC,#BDDB8F,#D1F2B6,#B0F592 */
+    /* fondo caja registro */
+    background-image: white;
+    color: #fff;
+    padding: 40px 80px 60px 120px;
+    width: 400px;
+    height: 80%;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    z-index: 1;
+    margin-top: 20px;
+}
+.logoImageSignin{
+    position: relative;
+    top:-1px;
+    left: 25%;
+    visibility: visible;
+}
+
+.logoImageSignin>img{
+    width: 45%;
+}
+.figureSignin{
+    background: #005FBE;
+    position: absolute;
+    z-index:1;
+    left: 0;
+    transform: translateX(-80%);
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+    overflow: hidden;
+    opacity: 1;
+}
+.figureSignin> img{
+    width: 300px;
+    height: 510px;
+
+}
+
+@media (max-width:300px){
+    .figureSignin{
+        visibility: hidden;
+    }
+    .containerSignin{
+        position: relative;
+        top: 300px;
+        left: 80px;
+        width: 260px;
+        height: 600px;
+    }
+}
+@media (min-width:301px){
+    .figureSignin{
+        visibility: hidden;
+    }
+    .containerSignin{
+        position: relative;
+        top: 300px;
+        left: 100px;
+        width: 330px;
+        height: 602px;
+    }
+}
+@media (min-width:501px){
+    .figureSignin{
+        visibility: hidden;
+    }
+    .containerSignin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 300px;
+        left: 230px;
+        width: 330px;
+        height: 602px;
+    }
+}
+@media (min-width:700px){
+    .figureSignin{
+        visibility: visible;
+        width: 60%;
+    }
+    .containerSignin{
+        position: relative;
+        left: 50%;
+        margin-top: 10%;
+        width: 500px;
+        height: 650px;
+    }
+}
+
+@media (min-width:1024px){
+    .figureSignin{
+        visibility: visible;
+        width: 300px;
+    }
+    .containerSignin{
+        position: relative;
+        left: 40%;
+        margin-top: 100px;
+        width: 65%;
+        height: 750px;
+    }
+}
+
+@media (min-width:1150px){
+    .figureSignin{
+        visibility: visible;
+        width: 300px;
+    }
+    .containerSignin{
+        position: relative;
+        left: 40%;
+        margin-top: 100px;
+        width: 600px;
+        height: 750px;
+    }
+}

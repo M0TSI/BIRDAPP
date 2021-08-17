@@ -1,29 +1,32 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
-import './ProfileInfo.css';
+import './styles/ProfileInfo.css';
 
 
 function ProfileInfo({ src, description, name }) {
     const history = useHistory();
     return (
-        <div>
+        <React.Fragment>
             <div className='infoProf'>
                 <div className="contenedorImg">
-                    <div >
-                        <img className="imagenProf" src={src} alt=""></img>
-                    </div>
+                        
+                    <img className="imagenProf" src={src} alt=""></img>
+
                     <div className="boton">
                         <button onClick={() => history.push('/card/new')} className="btn btn--1">
                             <h3 className="letra">Añadir un Plan</h3>
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className="descriptionInfo">
+                <hr></hr>
                     <h2 className="letra">{name}</h2>
+                    <hr></hr>
                     <h5 className="letra">{description}</h5>
+                    <hr></hr>
                 </div>
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 

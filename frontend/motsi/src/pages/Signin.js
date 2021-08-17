@@ -2,6 +2,11 @@ import React from 'react';
 
 import SigninForm from '../components/SigninForm';
 import registerphotoform from '../images/humming-bg-login.jpg';
+import './styles/Signin.css'
+import Header from '../components/Header';
+import logo from '../images/logo.jpeg'
+
+
 
 class Signin extends React.Component {
   state = {
@@ -11,12 +16,12 @@ class Signin extends React.Component {
         firstName: '',
         lastName: '',
         email: '',
-        jobTitle: '',
-        twitter: '',
-        password:''
-      }
+        password:'',
+        TipoDeUsuario:'',
+      },  
+     
   };
-
+  
   handleChange = e => {
     this.setState({
 
@@ -44,23 +49,25 @@ class Signin extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="row">
-
-            <div className="col-6">
-              <h1>Signin</h1>
+        <Header/>
+          <div className="containerSignin">
+            <div className="formSignin">
+              <div className="logoImageSignin">
+                  <img src={logo} alt="" />  
+              </div>
               <SigninForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
+                
                 error={this.state.error}
               />
             </div>
-            <div className="col-6">
+            <div className="figureSignin">
               <img src={registerphotoform} alt="" />
             </div>
-          </div>
-        </div>
+          </div><br></br>
+        
       </React.Fragment>
     );
   }

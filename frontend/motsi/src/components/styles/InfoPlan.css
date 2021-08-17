@@ -1,52 +1,83 @@
+
 .infoplan {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 40px;
     margin-right: 40px;
       display: flex;
-      padding: 4vh;
-      justify-content: space-around;    
-      background-color: rgba(0, 0, 0, 0.897);
-      align-items: center;
+      justify-content: space-around;  
+      background-color: #BDDB8F;
       box-shadow: 0 20px 30px -30px black;
       flex-wrap: wrap;
-      color: blanchedalmond;
+      color: black;
       text-align: left;
+      align-items: center;
+      margin-top: 10px;
+      padding:20px ;
+      border-radius: 10px;
+  }
+  .Info{
+    display: flex;
+    color: rgb(209, 209, 209);
+    font-size: 25px;
+  }
+  .Info>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    
   }
   .Bold{
     font-weight: bold;
+    color: white;
   }
   .BoldPrice{
     font-weight: bold;
     color:darkgoldenrod;
   }
   .Imagen{
-    width: 100%;
+    width: 50%;
     object-fit: cover;
-    box-shadow: 0 0 30px -5px black;
-    border-radius: 10px;
-  }
-  .ImagenC{
-    
-    width: 100%;  
-    margin: 20px;
-    justify-content: center;
+    margin-bottom:30px ;
+
   }
   .divInfo{
     width: 100% ;
+    display: flex;
+    flex-direction: column;
     padding: 3vw;
     text-align: justify;
+    font-size: 18px;
+    align-items: center;
   }
   
   .PriceNameC{
     border-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
     font-family: sans-serif;
-    background-color: rgba(0, 0, 0, 0.192);
-    width: 100%;
+    background-color: rgb(0, 0, 0);
     padding: 20px;
     display: flex;
-    justify-content: space-around;
-    box-shadow: 0 0px 10px 0px black;
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0);
     flex-wrap: wrap;
-    margin-bottom: 5vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #departamento{
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right:1px solid rgb(131,131,131) ;
+  }
+
+
+
+  @media (max-width: 450px){
+    .Info{
+      flex-direction: column;
+      font-size: 15px;
+    }
+    .Imagen{
+      width: 100%;
+    }
   }

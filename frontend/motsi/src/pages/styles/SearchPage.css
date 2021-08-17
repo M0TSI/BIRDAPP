@@ -1,5 +1,7 @@
 .searchPage_info {
     padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .searchPage_info > p {
@@ -11,4 +13,8 @@
     margin-bottom: 30px;
     text-transform: inherit;
     margin: 5px;
+}
+
+#dropdown_filter {
+    width: 50px;
 }

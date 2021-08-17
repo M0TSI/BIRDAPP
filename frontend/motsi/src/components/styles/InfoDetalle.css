@@ -11,6 +11,9 @@
     flex-wrap: wrap;
     text-align: left;
   }
+.infoDetalle>div div{
+  background-color: #B0F592;
+}
 .titulos{
   width: 100%;
   text-align: center;

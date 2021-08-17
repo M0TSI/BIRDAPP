@@ -1,9 +1,9 @@
 import React from 'react';
-import HeaderLP from '../components/HeaderLP';
+import HeaderLP from '../../components/HeaderLP';
 import FeedLP from '../components/FeedLP';
 import '../pages/styles/landingPage.css';
 import DescriptionLP from "../components/DescriptionLP";
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 
 // ES7 snippets to do 'rfce'

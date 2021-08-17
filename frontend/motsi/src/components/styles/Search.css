@@ -1,8 +1,9 @@
 .search {
   position: absolute;
-  top: 35px;
-  left: 25%;
-  width: 100vw;
+  top:430px;
+  left: 30%;
+  /* width: 1vw; */
+  /* object-fit: contain; */
 }
 
 .search > h2 {
@@ -34,11 +35,11 @@
 .search > button {
   position: absolute;
   left: 0;
-  top: 480px;
+  top: 95vh;
   text-transform: inherit !important;
   background-color: #63cc70;
   color: white;
-  width: 579px;
+  width: 335px;
 }
 
 .search > button:hover {

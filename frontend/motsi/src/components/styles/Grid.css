@@ -3,10 +3,11 @@
     padding-top: 15px;
     display: flex;
     justify-content: space-between;    
-    background-color: rgb(236, 236, 236);
+    background-color: #eaeee3;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     box-shadow: 0 10px 40px -20px black;
+    border-radius: 10px;
 }

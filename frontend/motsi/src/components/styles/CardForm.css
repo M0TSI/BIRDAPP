@@ -1,0 +1,10 @@
+.form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-control{
+    min-width: 50px;
+    max-width: 600px;
+    border-color: black;
+}

@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 20px;
+    margin-bottom: 60px;
 }
 
 .Result__heart {
@@ -41,18 +42,28 @@
 
 .Result__infoTop > h3 {
     font-weight: 300;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .Result__infoTop > p {
-    margin-top: 10px;
+    /* margin-top: 5px; */
     font-size: 13px;
     color: gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  white-space: nowrap; 
   }
   
 .Result__infoBottom {
     display: flex;
     justify-content: space-between;
+}
+
+.text_gray {
+    font-size: 13px;
+    color: gray;
+    margin-right: 5px;
+    justify-self: flex-end;
 }
 
 
@@ -68,10 +79,17 @@
 
 .Results__price > p {
     text-align: right;
+    line-height: 1rem;
+    
   }
 
 .Results__price {
     position: absolute;
-    bottom: 20px;
+    bottom: -5px;
     right: 30px;
+}
+
+.Results__price > h2 {
+    text-align: right;
+    line-height: 1rem;
 }

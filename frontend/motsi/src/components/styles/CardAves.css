@@ -1,43 +1,23 @@
-.card {
-    width: 220px;
-      margin: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
-      transition: transform 100ms ease-in;
-      cursor: pointer;
-      justify-content: center;
-    }
-    
-    .card:hover {
-      transform: scale(1.07);
-    }
-    
-    .card > img {
-      object-fit: cover;
-      width: 220px;
-      height: 220px;;
-    }
-    
-    .card__info {
-        margin-top: -9px;
-        border-radius: 10px;
-        padding: 20px;
-        padding-top: 20px;
-        border: 1;
-        justify-content: center;
-        text-align: center;
-      }
-    
-      .card__info > h2 {
-          
-        font-size: 18px;
-        font-weight: 600;
-      }
-      
-      .card__info > h4 {
-        font-size: 14px;
-        font-weight: 300;
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
+.cardAves{
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 20px 30px -30px black;
+}
+.cardAves img:hover{
+  width: 410px;
+}
+.cardAves img{
+  border-radius: 8px;
+  width: 400px;
+}
+@media (max-width:800px) {
+  .cardAves img{
+    border-radius: 8px;
+    width: 250px;
+  }
+  .cardAves img:hover{
+    width: 260px;
+  }
+}

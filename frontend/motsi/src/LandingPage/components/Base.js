@@ -7,10 +7,12 @@ import Description from './Description';
 function Base() {
 
         return (
+        <React.Fragment>
         <div className='bigcontainer'>
             <Image/>
             <Description/>
         </div>
+        </React.Fragment>
     )
 }
 

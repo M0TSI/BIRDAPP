@@ -1,0 +1,70 @@
+.formSignin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.formSignin >h1{
+    /* registro */
+    font-size: 40px;
+    margin: 15px 0 20px;
+    color: #80a549;
+    font-weight:bold;
+}
+.formSignin-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+    
+}
+ .formSignin-group> label{
+    /* campos */
+    color: #547a1a;
+}
+.formSignin-control{
+    border-radius: 300px;
+    height: 40px;
+    outline: none;
+}
+
+.select{
+    padding:3px 50px 3px ;
+}
+
+/* .formSignin-control:invalid:required{
+        border: 2px solid red;
+      }
+      
+/* .formSignin-control:invalid:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      } */
+      
+/*.formSignin-control:valid {
+        border: 2px solid black;
+      } */
+
+.linkSignin{
+    /* texto link */
+    color: #728556
+}
+.formSignin>p{
+    /* texto al lado del link */
+    color: #547a1a;
+}
+.botonSignin{
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    /* fondo botón */
+    background-color: #5f6d4a;
+    border-color: #728556;
+    /* texto botón */
+    color: white;
+}
+.botonSignin:hover{
+    background-color: #314710;
+    border-color: #728556;
+}

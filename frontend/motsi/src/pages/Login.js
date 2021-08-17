@@ -1,20 +1,15 @@
 import React from 'react';
-
-
 import LoginForm from '../components/LoginForm';
 import registerphotoform from '../images/humming-bg-login.jpg';
-
-
+import './styles/Login.css'
+import Header from '../components/Header';
+import logo from '../images/logo.jpeg'
 class Login extends React.Component {
   state = {
     loading: false,
     error: null,
     form: {
-        firstName: '',
-        lastName: '',
         email: '',
-        jobTitle: '',
-        twitter: '',
         password:''
       }
   };
@@ -46,11 +41,12 @@ class Login extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="row">
-
-            <div className="col-6">
-              <h1>Login</h1>
+          <Header/>
+          <div className="containerLogin">
+            <div className="formLogin">
+            <div className="logoImageLogin">
+                <img src={logo} alt="" />
+              </div>
               <LoginForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
@@ -58,11 +54,10 @@ class Login extends React.Component {
                 error={this.state.error}
               />
             </div>
-            <div className="col-6">
-              <img src={registerphotoform} alt="" />
-            </div>
+          <div className="figureLogin">
+              <img src={registerphotoform} alt="figureLogin" />
           </div>
-        </div>
+        </div><br></br>
       </React.Fragment>
     );
   }

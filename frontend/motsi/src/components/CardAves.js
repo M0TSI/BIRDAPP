@@ -3,15 +3,14 @@ import '../components/styles/CardAves.css'
 import {useHistory} from "react-router-dom";
 
 
-function CardAves({ src, title}) {
+function CardAves({ src}) {
     const history = useHistory();
     return (
-        <div className='card' onClick={() => history.push('/VistaDetallada')}>
+        <React.Fragment>
+        <div className="cardAves">
             <img src={src} alt="" />
-            <div className="card__info">
-                <h2>{title}</h2>
-            </div>
         </div>
+        </React.Fragment>
     )
 }
 

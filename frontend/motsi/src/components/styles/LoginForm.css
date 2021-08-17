@@ -1,0 +1,49 @@
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formLogin >h1{
+ 
+    font-size: 40px;
+    margin: 20px 0 40px;
+    color: #80a549;
+    font-weight:bold;
+}
+.formLogin-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+}
+.formLogin-control{
+    border-radius: 300px;
+    height: 40px;
+    outline: none;
+}
+.linkLogin{
+    color: #728556
+    
+}
+.formLogin>p{
+    /* texto al lado del link */
+    color: #547a1a;
+    letter-spacing: 1px
+}
+
+.botonLogin{
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    /* fondo botón */
+    background-color: #5f6d4a;
+    border-color: #728556;
+    /* texto botón */
+    color: white;
+}
+.botonLogin:hover{
+    background-color: #314710;
+    border-color: #728556;
+}

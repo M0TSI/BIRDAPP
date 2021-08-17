@@ -1,46 +1,179 @@
 .banner {
-    background: url("https://images.unsplash.com/photo-1539617546058-a8f9510b464e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80") center center;
-    height: 50vh;
+    background: url("https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80") center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
     position: relative;
+    margin:0;
+    opacity: 0.9;
+    
   }
   
-  .banner__info {
-      background-color: black;
-      color: white;
-      padding-top: 7vh;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-bottom: 60px;
-      width: 300px;
-      height: 90%;
+  .banner__info {  
+    
+    color: white;
+    padding-top: 5vh;
+    padding-left: 5vh;
+    padding-right: 6vh;
+    /* padding-bottom: 5.3vh; */
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner__info > h1 {
+      font-size: 260%;
+      
+
+  }
+
+  .banner__info > h5 {
+      font-size: 130%;
+      
+  }
+  .banner__info>Button{
+    font-size: 130%;
+    width: 150px; 
+    height: 70px;
   }
   
   .banner__search {
-      display: flex;
+    width: 70vh;
+    margin-top: 3vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;  
+    display: flex;
       flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      position: relative;
+      left: 32%;
   }
   
   .banner__searchButton {
-    background-color: white !important;
-    font-weight: 900 !important;
-    text-transform: inherit !important;
-    color: #63cc70 !important;
+    /* background-color: #bddb8f !important; */
+    /* background:url('https://i.ibb.co/L8nBkbs/banner.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-weight: 900 !important;
+    text-transform: inherit !important; */
+    /* height: 50vh; */
+    /* border-radius: 0; */
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
   }
+
+  .banner__searchButton > button {
+   display: flex;
+    color: white;
+    font-weight: 900 !important;
+    font-size: 120%;
+    text-transform: inherit !important;
+    width: 70%; 
+    background-color: #5e802c;
+    border-radius: 30px;
+   
+  }
+  .banner__searchButton>button:hover{
+    color: white;
+    background-color: rgb(135, 179, 110);
+  }
+  .border{
+    display: flex;
+    justify-content: right;
+  }
+
+  .banner__searchButton > h4 {
+   display: flex;
+    color: rgb(78, 187, 78);
+    font-weight: 500 !important;
+    font-size: 180%;
+    text-transform: inherit !important;
+    padding:2vh;
+    text-align: center;
+    
+  }
+
+  /* .banner__searchButton:hover {
+    background-color: black !important;
+    color: #63cc70 !important;
+    -webkit-box-shadow: 1px 3px 1px #9E9E9E;
+    -moz-box-shadow: 1px 3px 1px #9E9E9E;
+    box-shadow: 1px -3px 1px #9E9E9E;
+  } */
   
   .banner__info > button {
       background-color: #63cc70;
       color: white;
       text-transform: inherit;
-      margin-top: 20px;
+      margin-top: 2vh;
       font-weight: 600;
+      border-radius: 30px;
   }
   
   .banner__info > button:hover {
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       color: #63cc70;
     }
     
   
   .banner__info > h5 {
       margin-top: 10px;
+  }
+
+  @media (max-width:300px) {
+    .banner__search{
+      position: relative;
+      left:0%;
+      width: 190px
+    }
+  }
+  @media (min-width:301px) {
+    .banner__search{
+      position: relative;
+      left:-15%
+    }
+  }
+  @media (min-width:400px) {
+    .banner__search{
+      position: relative;
+      left:0%
+    }
+  }
+  @media (min-width:550px) {
+    .banner__search{
+      position: relative;
+      left:10%
+    }
+  }
+  @media (min-width:700px) {
+    .banner__search{
+      position: relative;
+      left:15%
+    }
+  }
+  @media (min-width:850px) {
+    .banner__search{
+      position: relative;
+      left:20%
+    }
+  }
+  @media (min-width:1050px) {
+    .banner__search{
+      position: relative;
+      left:25%
+    }
+  }
+  @media (min-width:1204px) {
+    .banner__search{
+      position: relative;
+      left:30%
+    }
   }

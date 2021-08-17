@@ -3,6 +3,7 @@ import '../components/styles/Description.css'
 
 function Description(){
     return(
+        <React.Fragment>
         <div className="container">
             <div className="text">
                 <h1>viaje al rio</h1>
@@ -21,6 +22,7 @@ function Description(){
                 <h2>Buen servicio</h2>
             </div>
         </div>
+        </React.Fragment>
     )
 }
 

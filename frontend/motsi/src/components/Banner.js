@@ -1,31 +1,33 @@
-import React, { useState } from 'react'
-import '../components/styles/Banner.css'
+import React, { useState } from "react";
+import "../components/styles/Banner.css";
 import { Button } from "@material-ui/core";
-import Search from './Search';
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-function Banner(){
-    const history = useHistory();
-    const [showSearch, setShowSearch] = useState(false);
-    
-    return (
-        <div className='banner'>
-            <div className='banner__search'>
-                {showSearch && <Search />}
+function Banner({ showSearch, setShowSearch }) {
+  const history = useHistory();
+  // const [showSearch, setShowSearch] = useState(false);
 
-                <Button onClick={() => setShowSearch(!showSearch)} className='banner__searchButton' variant='outlined'>
-                    {showSearch ? "Ocultar" : "Buscar Fechas"}
-                </Button>
-            </div>
-            <div className='banner__info'>
-                <h1>Bienvenido</h1>
-                <h5>
-                    Aqui encontraras cosas nuevas
-                </h5>
-                <Button onClick={() => history.push('/search')} variant='outlined'>Explora </Button>
-            </div>
+  return (
+    <React.Fragment>
+        <div className="banner">
+          <div className="banner__info">
+            <h1>Bienvenido</h1>
+            <h5>Aquí encontrarás actividades nuevas</h5>
+            <Button onClick={() => history.push("/search")} variant="outlined">
+              Explora{" "}
+            </Button>
+          </div>
         </div>
-    )
+        <div className="banner__search">
+          <div className="banner__searchButton">
+            <h4>Encuentra el plan que se acomode a tu itinerario</h4>
+            <Button className="border" onClick={() => setShowSearch(!showSearch)}>
+              {showSearch ? "Ocultar" : "Busca planes por fechas"}
+            </Button>
+          </div>
+        </div>
+    </React.Fragment>
+  );
 }
 
-export default Banner
+export default Banner;

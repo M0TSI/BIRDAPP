@@ -1,0 +1,31 @@
+.content{
+    height: 110;
+    background: -webkit-linear-gradient(-90deg, #4567b2 20%, #8ab9ff 80%);
+    background: #bddb8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    width: 88vw;
+    min-width: 50px;  
+    box-shadow: 0px 5px 18px -6px rgba(0, 0, 0, 0.75);
+    padding-top: 10px;
+    background-color: white;
+    box-shadow: 0px 5px 30px -3px rgba(0, 0, 0, 0.75);
+}
+
+.image{
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.centro{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
