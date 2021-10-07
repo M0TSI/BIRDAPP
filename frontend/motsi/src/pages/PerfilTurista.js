@@ -68,7 +68,8 @@ function PerfilTurista() {
           <div>
             <ProfileInfo
               src={userInfo.src ? userInfo.src : ""}
-              description={userInfo.description ? userInfo.description : ""}
+              description="Número Telefónico:   +57 3176578902"
+              description2 = "Correo Electrónico:   javierhenao_toures@gmail.com"
               name={userInfo.name ? userInfo.name : ""}
             />
           </div>
