@@ -40,6 +40,8 @@ function Header() {
             src="https://image.flaticon.com/icons/png/512/20/20176.png"
             alt=""
           />
+          {/* {hover ? <h5>Inicio</h5> : null} */}
+          <h5>Inicio</h5>
         </Link>
         <Link
           to="/Perfil"
@@ -56,22 +58,8 @@ function Header() {
             src="https://image.flaticon.com/icons/png/512/64/64572.png"
             alt=""
           />
-        </Link>
-        <Link
-          to="/Search"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "black",
-          }}
-        >
-          <img
-            className="header_icon"
-            src="https://cdn-icons-png.flaticon.com/512/1076/1076744.png"
-            alt=""
-          />          
+          {/* {hover ? <h5>Perfil</h5> : null} */}
+          <h5>Perfil</h5>
         </Link>
         <Link
           to="/login"
@@ -84,10 +72,12 @@ function Header() {
           }}
         >
           <img
-            className="header_icon login"
+            className="header_icon"
             src="https://image.flaticon.com/icons/png/512/1828/1828391.png"
             alt=""
           />
+          {/* {hover ? <h5>Iniciar Sesión</h5> : null} */}
+          <h5>Iniciar Sesión</h5>
         </Link>
         <Link
           to="/signin"
@@ -104,6 +94,8 @@ function Header() {
             src="https://image.flaticon.com/icons/png/512/3160/3160562.png"
             alt=""
           />
+          {/* {hover ? <h5>Regístrate</h5> : null} */}
+          <h5>Regístrate</h5>
         </Link>
       </div>
     </React.Fragment>

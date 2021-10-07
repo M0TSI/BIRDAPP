@@ -8,12 +8,12 @@ function InfoPlan({ results}) {
     return (
         <React.Fragment>
             <div className="infoplan">
-                <img className="Imagen" src={results.activity_media_file} alt=""></img>
+                <img className="Imagen" src={results.src} alt=""></img>
 
                 <div className="PriceNameC">
                     <div>
-                        <h3 className="Bold">{results.activity_description}</h3>
-                        <h3 className="BoldPrice">${results.activity_ammount} COP</h3>
+                        <h3 className="Bold">{results.title}</h3>
+                        <h3 className="BoldPrice">${results.price} COP</h3>
                     </div>
                     <div className="Info">
                         <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/SelectorFoto.css';
 import CardForm from '../components/CardForm';
-// import { cards_form } from '../api';
+import { cards_form } from '../api';
 
 
 function SelectorFoto(props) {

@@ -10,7 +10,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { DateRange } from "react-date-range";
 import Slider from "@material-ui/core/Slider";
-// import { getAllDepartamentos, getAllMunicipios } from "../apiG";
+import { getAllDepartamentos, getAllMunicipios } from "../apiG";
 
 import { Link } from "react-router-dom";
 function SearchPage(props) {
@@ -92,7 +92,7 @@ function SearchPage(props) {
     } else {
       setDptoSelected(option);
       setDptoSelectedId(id);
-      // getMunicipios(id);
+      getMunicipios(id);
     }
   };
 
@@ -188,46 +188,46 @@ function SearchPage(props) {
     console.log(newValue);
   };
 
-  // const getDepartamentos = async () => {
-  //   getAllDepartamentos().then((response) => {
-  //     let dptoActual = "";
-  //     const dptos = [{ dpto: "Ninguno" }];
+  const getDepartamentos = async () => {
+    getAllDepartamentos().then((response) => {
+      let dptoActual = "";
+      const dptos = [{ dpto: "Ninguno" }];
 
-  //     for (let i = 0; i < response.length; i++) {
-  //       if (response[i].dpto === dptoActual) {
-  //         console.log("entro a dpto igual");
-  //       } else {
-  //         dptoActual = response[i].dpto;
-  //         dptos.push(response[i]);
-  //         setDepartamentos(dptos);
-  //         console.log(dptos);
-  //       }
-  //     }
-  //   });
-  // };
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].dpto === dptoActual) {
+          console.log("entro a dpto igual");
+        } else {
+          dptoActual = response[i].dpto;
+          dptos.push(response[i]);
+          setDepartamentos(dptos);
+          console.log(dptos);
+        }
+      }
+    });
+  };
 
-  // const getMunicipios = async (id) => {
-  //   getAllMunicipios(id).then((response) => {
-  //     response.unshift({ nom_mpio: "Ninguno" });
-  //     console.log("resp municipios ninguno", response);
-  //     setMunicipios(response);
-  //   });
-  // };
+  const getMunicipios = async (id) => {
+    getAllMunicipios(id).then((response) => {
+      response.unshift({ nom_mpio: "Ninguno" });
+      console.log("resp municipios ninguno", response);
+      setMunicipios(response);
+    });
+  };
 
   React.useEffect(() => {
-  //   getDepartamentos();
-  //   //pasar el id en la navegacion para renderizar el componente de vista detallada
-  //   setSearchResults(resultadosOriginal);
-  //   setAmountOfResults(resultadosOriginal.length);
-  //   let mayor = 0;
-  //   for (let i = 0; i < resultadosOriginal.length; i++) {
-  //     if (resultadosOriginal[i].price > mayor) {
-  //       mayor = resultadosOriginal[i].price;
-  //       setPrecioMax(resultadosOriginal[i].price);
-  //       setPriceRange([0, resultadosOriginal[i].price]);
-  //       console.log("mayor", mayor);
-  //     }
-  //   }
+    getDepartamentos();
+    //pasar el id en la navegacion para renderizar el componente de vista detallada
+    setSearchResults(resultadosOriginal);
+    setAmountOfResults(resultadosOriginal.length);
+    let mayor = 0;
+    for (let i = 0; i < resultadosOriginal.length; i++) {
+      if (resultadosOriginal[i].price > mayor) {
+        mayor = resultadosOriginal[i].price;
+        setPrecioMax(resultadosOriginal[i].price);
+        setPriceRange([0, resultadosOriginal[i].price]);
+        console.log("mayor", mayor);
+      }
+    }
   }, []);
 
   return (

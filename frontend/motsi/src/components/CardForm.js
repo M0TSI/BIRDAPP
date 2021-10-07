@@ -1,5 +1,5 @@
 import React from 'react';
-// import { cards_form } from '../api';
+import { cards_form } from '../api';
 import SelectorFoto from '../components/SelectorFoto.js';
 import './styles/CardForm.css';
 import Select from "@material-ui/core/Select";
@@ -9,8 +9,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Button } from "@material-ui/core";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
 import es from "date-fns/locale/es";
-import axios from "axios";
-
 registerLocale("es", es);
 
 const ITEM_HEIGHT = 48;
@@ -27,29 +25,22 @@ const MenuProps = {
 class CardForm extends React.Component {
   handleClick = (e) => {
     const body = {
-      activity_description: this.props.formValues.title,
-      //description: this.props.formValues.description,
-      activity_ammount: this.props.formValues.price,
-      activity_media_file: "https://img.flaticon.com/icons/png/512/37/37543.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF",
-      id_time_unit: 8
+      title: this.props.formValues.title,
+      description: this.props.formValues.description,
+      price: this.props.formValues.price,
       // pais: this.props.formValues.pais,
-      //departamento: this.props.formValues.departamento,
-      //departamentoId: this.props.formValues.departamentoId,
-      //ciudadId: this.props.formValues.ciudadId,
-      //ciudad: this.props.formValues.ciudad,
-      //fechaInicio: this.props.formValues.fechaInicio,
-      //duracion: this.props.formValues.duracion,
-      //src: this.props.formValues.src,
+      departamento: this.props.formValues.departamento,
+      departamentoId: this.props.formValues.departamentoId,
+      ciudadId: this.props.formValues.ciudadId,
+      ciudad: this.props.formValues.ciudad,
+      fechaInicio: this.props.formValues.fechaInicio,
+      duracion: this.props.formValues.duracion,
+      src: this.props.formValues.src,
     };
-
-    axios.post("https://motsi-mintic2.herokuapp.com/api/v1/create_activty/", body)
-    .then(function (response){
+    cards_form(body).then((response) => {
       console.log(response);
-      alert("Actividad creada con exito")
-    })
-    .catch(e=>{
-      console.log(e)
-    })
+    });
+    console.log("Button was clicked");
   };
 
   render() {

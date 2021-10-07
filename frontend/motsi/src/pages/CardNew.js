@@ -1,13 +1,12 @@
 import React from 'react';
 
-import './styles/Editor.css';
+import './styles/CardNew.css';
 import CardForm from '../components/CardForm';
-import CardAvesE from '../components/CardAvesE';
-// import { getAllDepartamentos, getAllMunicipios } from "../apiG";
-// import { Get_InfoPlan, Post_InfoPlan } from '../api_Manuel';
+import imagecardform from '../images/imageformcreate.jpg';
+import {Post_InfoPlan} from '../api_Manuel';
+import { getAllDepartamentos, getAllMunicipios } from "../apiG";
 
-
-class Editor extends React.Component {
+class CardNew extends React.Component {
   state = {
     loading: false,
     error: null,
@@ -28,20 +27,8 @@ class Editor extends React.Component {
       openDpto: false,
       openCiudad: false,
       datePickerVisible: false,
-      aves: []
     },
   };
-
-  HandleChangeFile(event){
-    var array = this.state.form.aves.slice();
-    array.push(URL.createObjectURL(event.target.files[0]));
-    this.setState({
-      form: {
-        ...this.state.form.CardForm,
-        aves: array,
-      },
-    });
-  }
 
   handleSelect = (date) => {
     this.setState({
@@ -61,41 +48,41 @@ class Editor extends React.Component {
     });
   };
 
-  // getDepartamentos = async () => {
-  //   getAllDepartamentos().then((response) => {
-  //     let dptoActual = "";
-  //     const dptos = [{ dpto: "Ninguno" }];
+  getDepartamentos = async () => {
+    getAllDepartamentos().then((response) => {
+      let dptoActual = "";
+      const dptos = [{ dpto: "Ninguno" }];
 
-  //     for (let i = 0; i < response.length; i++) {
-  //       if (response[i].dpto === dptoActual) {
-  //         console.log("entro a dpto igual");
-  //       } else {
-  //         dptoActual = response[i].dpto;
-  //         dptos.push(response[i]);
-  //         this.setState({
-  //           form: {
-  //             ...this.state.form,
-  //             departamentos: dptos,
-  //           },
-  //         });
-  //         console.log(dptos);
-  //       }
-  //     }
-  //   });
-  // };
+      for (let i = 0; i < response.length; i++) {
+        if (response[i].dpto === dptoActual) {
+          console.log("entro a dpto igual");
+        } else {
+          dptoActual = response[i].dpto;
+          dptos.push(response[i]);
+          this.setState({
+            form: {
+              ...this.state.form,
+              departamentos: dptos,
+            },
+          });
+          console.log(dptos);
+        }
+      }
+    });
+  };
 
-  // getMunicipios = async (id) => {
-  //   getAllMunicipios(id).then((response) => {
-  //     response.unshift({ nom_mpio: "Ninguno" });
-  //     console.log("resp municipios ninguno", response);
-  //     this.setState({
-  //       form: {
-  //         ...this.state.form,
-  //         ciudades: response,
-  //       },
-  //     });
-  //   });
-  // };
+  getMunicipios = async (id) => {
+    getAllMunicipios(id).then((response) => {
+      response.unshift({ nom_mpio: "Ninguno" });
+      console.log("resp municipios ninguno", response);
+      this.setState({
+        form: {
+          ...this.state.form,
+          ciudades: response,
+        },
+      });
+    });
+  };
 
   handleOpenDpto = () => {
     this.setState({
@@ -194,7 +181,24 @@ class Editor extends React.Component {
     }
   };
 
-  Get_InfoPlan = (id) => { };
+  postInfoPLan = () => {
+    const body = {
+      title: this.state.form.title,
+      description: this.state.form.description,
+      price: this.state.form.price,
+      // pais: this.state.form.pais,
+      departamento: this.state.form.departamento,
+      departamentoId: this.state.form.departamentoId,
+      ciudadId: this.state.form.ciudadId,
+      ciudad: this.state.form.ciudad,
+      fechaInicio: this.state.form.fechaInicio,
+      duracion: this.state.form.duracion,
+      src: this.state.form.src,
+    };
+    Post_InfoPlan(body).then((response) => {
+      console.log(response);
+    });
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -221,42 +225,21 @@ class Editor extends React.Component {
 
   componentDidMount() {
     this.getDepartamentos();
-    this.setState({
-      form: {
-        ...this.state.form,
-        aves: [
-          {
-            src: "https://live.staticflickr.com/4667/40481871362_125ff34982_b.jpg",
-          },
-          {
-            src: "https://live.staticflickr.com/4667/40481871362_125ff34982_b.jpg",
-          },
-          {
-            src: "https://live.staticflickr.com/4667/40481871362_125ff34982_b.jpg",
-          },
-          {
-            src: "https://live.staticflickr.com/4667/40481871362_125ff34982_b.jpg",
-          },
-        ],
-      },
-    });
   }
 
   render() {
-    console.log("HEllo World", this.state.form.aves);
     return (
       <React.Fragment>
-        <div className="content2">
-          <div className="container2">
-            <div className="centro2">
+        <div className="content">
+          <div className="container">
+            <div className="centro">
               <div>
-                <h1>Editar Plan</h1>
+                <h1>Nuevo plan</h1>
               </div>
             </div>
-            <div className="centro2">
+            <div className="centro">
               <div>
                 <CardForm
-                  HandleChangeFile={this.HandleChangeFile}
                   handleClickDate={this.handleClickDate}
                   handleSelect={this.handleSelect}
                   handleOpenDpto={this.handleOpenDpto}
@@ -273,22 +256,6 @@ class Editor extends React.Component {
               </div>
             </div>
           </div>
-          <div className="galeria">
-            <div className="tGaleria">
-              <h2>Galería</h2>
-
-            </div>
-
-            {(this.state.form.aves ? this.state.form.aves.length > 0 : this.state.form.aves) ?
-              this.state.form.aves.map((item, index) => {
-                return (
-                  <CardAvesE src={item.src} key={index} />
-                );
-
-              })
-              : null}
-
-          </div>
         </div>
         <br></br>
       </React.Fragment>
@@ -296,4 +263,4 @@ class Editor extends React.Component {
   }
 }
 
-export default Editor;
+export default CardNew;
