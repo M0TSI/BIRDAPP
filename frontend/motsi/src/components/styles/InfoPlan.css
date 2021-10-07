@@ -39,6 +39,7 @@
     width: 50%;
     object-fit: cover;
     margin-bottom:30px ;
+    border-radius: 10px;
 
   }
   .divInfo{

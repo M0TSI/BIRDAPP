@@ -3,8 +3,8 @@ import React from 'react';
 import './styles/CardNew.css';
 import CardForm from '../components/CardForm';
 import imagecardform from '../images/imageformcreate.jpg';
-import {Post_InfoPlan} from '../api_Manuel';
-import { getAllDepartamentos, getAllMunicipios } from "../apiG";
+// import {Post_InfoPlan} from '../api_Manuel';
+// import { getAllDepartamentos, getAllMunicipios } from "../apiG";
 
 class CardNew extends React.Component {
   state = {
@@ -48,41 +48,41 @@ class CardNew extends React.Component {
     });
   };
 
-  getDepartamentos = async () => {
-    getAllDepartamentos().then((response) => {
-      let dptoActual = "";
-      const dptos = [{ dpto: "Ninguno" }];
+  // getDepartamentos = async () => {
+  //   getAllDepartamentos().then((response) => {
+  //     let dptoActual = "";
+  //     const dptos = [{ dpto: "Ninguno" }];
 
-      for (let i = 0; i < response.length; i++) {
-        if (response[i].dpto === dptoActual) {
-          console.log("entro a dpto igual");
-        } else {
-          dptoActual = response[i].dpto;
-          dptos.push(response[i]);
-          this.setState({
-            form: {
-              ...this.state.form,
-              departamentos: dptos,
-            },
-          });
-          console.log(dptos);
-        }
-      }
-    });
-  };
+  //     for (let i = 0; i < response.length; i++) {
+  //       if (response[i].dpto === dptoActual) {
+  //         console.log("entro a dpto igual");
+  //       } else {
+  //         dptoActual = response[i].dpto;
+  //         dptos.push(response[i]);
+  //         this.setState({
+  //           form: {
+  //             ...this.state.form,
+  //             departamentos: dptos,
+  //           },
+  //         });
+  //         console.log(dptos);
+  //       }
+  //     }
+  //   });
+  // };
 
-  getMunicipios = async (id) => {
-    getAllMunicipios(id).then((response) => {
-      response.unshift({ nom_mpio: "Ninguno" });
-      console.log("resp municipios ninguno", response);
-      this.setState({
-        form: {
-          ...this.state.form,
-          ciudades: response,
-        },
-      });
-    });
-  };
+  // getMunicipios = async (id) => {
+  //   getAllMunicipios(id).then((response) => {
+  //     response.unshift({ nom_mpio: "Ninguno" });
+  //     console.log("resp municipios ninguno", response);
+  //     this.setState({
+  //       form: {
+  //         ...this.state.form,
+  //         ciudades: response,
+  //       },
+  //     });
+  //   });
+  // };
 
   handleOpenDpto = () => {
     this.setState({
@@ -181,24 +181,24 @@ class CardNew extends React.Component {
     }
   };
 
-  postInfoPLan = () => {
-    const body = {
-      title: this.state.form.title,
-      description: this.state.form.description,
-      price: this.state.form.price,
-      // pais: this.state.form.pais,
-      departamento: this.state.form.departamento,
-      departamentoId: this.state.form.departamentoId,
-      ciudadId: this.state.form.ciudadId,
-      ciudad: this.state.form.ciudad,
-      fechaInicio: this.state.form.fechaInicio,
-      duracion: this.state.form.duracion,
-      src: this.state.form.src,
-    };
-    Post_InfoPlan(body).then((response) => {
-      console.log(response);
-    });
-  };
+  // postInfoPLan = () => {
+  //   const body = {
+  //     title: this.state.form.title,
+  //     description: this.state.form.description,
+  //     price: this.state.form.price,
+  //     // pais: this.state.form.pais,
+  //     departamento: this.state.form.departamento,
+  //     departamentoId: this.state.form.departamentoId,
+  //     ciudadId: this.state.form.ciudadId,
+  //     ciudad: this.state.form.ciudad,
+  //     fechaInicio: this.state.form.fechaInicio,
+  //     duracion: this.state.form.duracion,
+  //     src: this.state.form.src,
+  //   };
+  //   Post_InfoPlan(body).then((response) => {
+  //     console.log(response);
+  //   });
+  // };
 
   handleChange = (e) => {
     this.setState({
@@ -223,9 +223,9 @@ class CardNew extends React.Component {
     }
   };
 
-  componentDidMount() {
-    this.getDepartamentos();
-  }
+  // componentDidMount() {
+  //   this.getDepartamentos();
+  // }
 
   render() {
     return (

@@ -14,7 +14,7 @@ Adicionalmente permite mantenerla en el TOP*/
 
 }
 .header_icon {
-    /* margin-left: 20px; */
+    margin-top: 10px;
     align-self: center;
     padding: 10px;
     height: 50px;
@@ -41,4 +41,3 @@ Adicionalmente permite mantenerla en el TOP*/
     margin-right: 80px;
 
 } */
-

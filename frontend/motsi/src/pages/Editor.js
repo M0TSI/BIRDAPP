@@ -3,8 +3,8 @@ import React from 'react';
 import './styles/Editor.css';
 import CardForm from '../components/CardForm';
 import CardAvesE from '../components/CardAvesE';
-import { getAllDepartamentos, getAllMunicipios } from "../apiG";
-import { Get_InfoPlan, Post_InfoPlan } from '../api_Manuel';
+// import { getAllDepartamentos, getAllMunicipios } from "../apiG";
+// import { Get_InfoPlan, Post_InfoPlan } from '../api_Manuel';
 
 
 class Editor extends React.Component {
@@ -61,41 +61,41 @@ class Editor extends React.Component {
     });
   };
 
-  getDepartamentos = async () => {
-    getAllDepartamentos().then((response) => {
-      let dptoActual = "";
-      const dptos = [{ dpto: "Ninguno" }];
+  // getDepartamentos = async () => {
+  //   getAllDepartamentos().then((response) => {
+  //     let dptoActual = "";
+  //     const dptos = [{ dpto: "Ninguno" }];
 
-      for (let i = 0; i < response.length; i++) {
-        if (response[i].dpto === dptoActual) {
-          console.log("entro a dpto igual");
-        } else {
-          dptoActual = response[i].dpto;
-          dptos.push(response[i]);
-          this.setState({
-            form: {
-              ...this.state.form,
-              departamentos: dptos,
-            },
-          });
-          console.log(dptos);
-        }
-      }
-    });
-  };
+  //     for (let i = 0; i < response.length; i++) {
+  //       if (response[i].dpto === dptoActual) {
+  //         console.log("entro a dpto igual");
+  //       } else {
+  //         dptoActual = response[i].dpto;
+  //         dptos.push(response[i]);
+  //         this.setState({
+  //           form: {
+  //             ...this.state.form,
+  //             departamentos: dptos,
+  //           },
+  //         });
+  //         console.log(dptos);
+  //       }
+  //     }
+  //   });
+  // };
 
-  getMunicipios = async (id) => {
-    getAllMunicipios(id).then((response) => {
-      response.unshift({ nom_mpio: "Ninguno" });
-      console.log("resp municipios ninguno", response);
-      this.setState({
-        form: {
-          ...this.state.form,
-          ciudades: response,
-        },
-      });
-    });
-  };
+  // getMunicipios = async (id) => {
+  //   getAllMunicipios(id).then((response) => {
+  //     response.unshift({ nom_mpio: "Ninguno" });
+  //     console.log("resp municipios ninguno", response);
+  //     this.setState({
+  //       form: {
+  //         ...this.state.form,
+  //         ciudades: response,
+  //       },
+  //     });
+  //   });
+  // };
 
   handleOpenDpto = () => {
     this.setState({

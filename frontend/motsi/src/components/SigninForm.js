@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles/SigninForm.css'
-import {signin_form} from '../apiValen';  //getTiposDeUsuario}  
+// import {signin_form} from '../apiValen';  //getTiposDeUsuario}  
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const options= 
 //getTiposDeUsuario().then((response)=>{
@@ -21,20 +22,23 @@ class SigninForm extends React.Component {
   
   handleClick = e => {
     const body= {
-      firstName: this.props.formValues.firstName,
-      lastName : this.props.formValues.lastName,
+      first_name: this.props.formValues.firstName,
+      second_name : this.props.formValues.lastName,
       email: this.props.formValues.email,
       password: this.props.formValues.password,
-      tipoDeUsuario: this.props.formValues.tipoDeUsuario
+      type_user: "this.props.TipoDeUsuario"
 
     };
-
-    signin_form(body).then(
-      (response)=> {
-        console.log(response)
-    }
-    )
-    console.log('Button was clicked');
+    console.log("Me diste click")
+    axios.post("https://motsi-mintic2.herokuapp.com/api/v1/create_user/", body)
+    .then(function (response){
+      console.log(response);
+      alert("Usuario registrado")
+    })
+    .catch(e=>{
+      console.log(e)
+      alert("Error al registrar el usuario")
+    })
   };
 
   render() {

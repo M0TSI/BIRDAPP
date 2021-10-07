@@ -16,11 +16,11 @@ function Grid({ results, navegacionPerfil }) {
               <div key={index}>
                 <Card
                   navegacionPerfil={navegacionPerfil}
-                  id={item.id}
-                  src={item.src}
-                  title={item.title}
+                  id={item.id_activity}
+                  src={item.activity_media_file}
+                  title={item.activity_description}
                   description={item.description}
-                  price={item.price}
+                  price={item.activity_ammount}
                 />
               </div>
             );

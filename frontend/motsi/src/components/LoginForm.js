@@ -1,22 +1,25 @@
 import React from 'react';
 import './styles/LoginForm.css'
-import {login_form} from '../apiValen';
+// import {login_form} from '../apiValen';
 import { Link } from "react-router-dom";
+import axios from "axios"
 class LoginForm extends React.Component {
 
   handleClick = e => {
     const body= {
-      email: this.props.formValues.email,
+      username: this.props.formValues.email,
       password: this.props.formValues.password,
 
     };
-
-    login_form(body).then(
-      (response)=> {
-        console.log(response)
-    }
-    )
-    console.log('Button was clicked');
+    axios.post("https://motsi-mintic2.herokuapp.com/token", body)
+    .then(function (response){
+      console.log(response);
+      alert("Ha ingresado correctamente")
+    })
+    .catch(e=>{
+      console.log(e)
+      alert("Error al ingresar (email o password incorrectos)")
+    })
   };
 
   render() {
