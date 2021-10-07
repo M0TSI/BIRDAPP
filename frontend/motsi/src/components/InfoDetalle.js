@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/InfoDetalle.css';
 import CardAves from './CardAves';
-import Alert from "react-bootstrap/Alert";
+
 import CardAmenities from './CardAmenities';
 import "./styles/Grid.css";
 

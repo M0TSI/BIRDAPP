@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/InfoPlan.css';
-import { Link } from "react-router-dom";
+
 
 
 function InfoPlan({ results}) {
